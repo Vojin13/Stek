@@ -13,8 +13,8 @@ public class Stack {
         if(brojac > 0){
             int copy = stack[brojac-1];
             stack[brojac-1] = 0;
-            brojac--;
-            return stack[brojac-1];
+
+            return stack[--brojac];
         }else{
             System.out.println("Stek je prazan");
             return 0;
@@ -38,5 +38,17 @@ public class Stack {
 
     }
 
+    @Override
+    public String toString(){
+        StringBuilder output = new StringBuilder();
+
+        for(int i= stack.length-1;i>=0;i--){
+            if(stack[i] != 0) {
+                output.append(stack[i]);
+                output.append(i == 0 ? "" : ", ");
+            }
+        }
+        return output.toString();
+    }
 
 }
