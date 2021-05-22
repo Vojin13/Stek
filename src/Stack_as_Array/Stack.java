@@ -22,7 +22,7 @@ public class Stack {
     }
 
     public void push(int element){
-        if(stack.length < brojac) {
+        if(stack.length > brojac) {
             stack[brojac] = element;
             brojac++;
         }else{
