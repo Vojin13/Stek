@@ -31,11 +31,19 @@ public class Stack {
     }
 
     public boolean isEmpty(){
-        return false;
+        if(stack[0] == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 
-    public void peek(){
-
+    public int peek(){
+        if(brojac > 0) {
+            return stack[brojac - 1];
+        }else{
+            return 0;
+        }
     }
 
     @Override
